@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,10 +28,38 @@ namespace Uzdavinys11
             {
                 Console.WriteLine($"skaičius {a} mažesnis už {c}");
             }
-            else if (a == b) 
+            else if (a == b)
             {
                 Console.WriteLine($"skaičius {a} lygus {b}");
             }
+
+            // 2 dalis 
+            Console.Write("Įveskite šios dienos temperatūrą: "); double temp = Convert.ToDouble(Console.ReadLine());
+            if (temp < 0)
+            {
+                Console.WriteLine("Žiauriai šalta");
+            }
+            else if (temp < 10)
+            {
+                Console.WriteLine("labai šalta");
+            }
+            else if (temp < 20)
+            {
+                Console.WriteLine("šalta");
+            }
+            else if (temp < 30)
+            {
+                Console.WriteLine("normli temperatūra");
+            }
+            else if (temp < 40) 
+            {
+                Console.WriteLine("karšta");
+            }
+            else if (temp >= 40) 
+            {
+;                Console.WriteLine("labai degina");
+            }
+            
         }
            
             
